@@ -75,7 +75,10 @@ data "aws_iam_policy_document" "repository" {
 
       actions = [
         "ecr:BatchGetImage",
+        "ecr:DeleteRepositoryPolicy",
         "ecr:GetDownloadUrlForLayer",
+        "ecr:GetRepositoryPolicy",
+        "ecr:SetRepositoryPolicy"
       ]
 
       condition {
