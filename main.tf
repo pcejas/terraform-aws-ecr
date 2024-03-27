@@ -74,9 +74,18 @@ data "aws_iam_policy_document" "repository" {
       }
 
       actions = [
+        "ecr:GetAuthorizationToken",
+        "ecr:BatchCheckLayerAvailability",
         "ecr:BatchGetImage",
-        "ecr:DeleteRepositoryPolicy",
+        "ecr:DescribeImageScanFindings",
+        "ecr:DescribeImages",
+        "ecr:DescribeRepositories",
         "ecr:GetDownloadUrlForLayer",
+        "ecr:GetLifecyclePolicy",
+        "ecr:GetLifecyclePolicyPreview",
+        "ecr:ListImages",
+        "ecr:ListTagsForResource",
+        "ecr:DeleteRepositoryPolicy",
         "ecr:GetRepositoryPolicy",
         "ecr:SetRepositoryPolicy"
       ]
